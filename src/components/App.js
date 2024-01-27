@@ -3,7 +3,7 @@ import React from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(0);
   return <div>
   {
   count==0?
@@ -11,7 +11,7 @@ const App = () => {
   :
     Array(count).fill(0).map((el,i)=><div key={i} >
     <input/>
-    <button onClick={()=>setCount(count-1)} >Delete</button>
+    <button classname="delete" onClick={()=>setCount(count-1)} >Delete</button>
     </div>
     )
   }
