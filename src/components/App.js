@@ -11,7 +11,7 @@ const App = () => {
   :
     Array(count).fill(0).map((el,i)=><div key={i} >
     <input/>
-    <button classname="delete" onClick={()=>setCount(count-1)} >Delete</button>
+    <button className="delete" onClick={()=>setCount(count-1)} >Delete</button>
     </div>
     )
   }
