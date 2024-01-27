@@ -1,13 +1,22 @@
-
+import {useState} from 'react'
 import React from "react";
 import './../styles/App.css';
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
+  const [count, setCount] = useState(2);
+  return <div>
+  {
+  count==0?
+  <p>No fields in the form</p>
+  :
+    Array(count).fill(0).map((el,i)=><div key={i} >
+    <input/>
+    <button onClick={()=>setCount(count-1)} >Delete</button>
     </div>
-  )
+    )
+  }
+  <button onClick={()=>setCount(count+1)} >Add Field</button>
+  </div>
 }
 
 export default App
